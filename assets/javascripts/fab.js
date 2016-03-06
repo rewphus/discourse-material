@@ -1,4 +1,6 @@
-Discourse.PageTracker.current().on('change', function () {
+var PageTracker = require('discourse/lib/page-tracker').default;
+
+PageTracker.current().on('change', function () {
 
         $('.list-controls').on('click', '#create-topic', function(){
             $('#create-topic').addClass('create-clicked');
